@@ -59,13 +59,13 @@ void loop() {
 	    sprintf(myIpString, "%d.%d.%d.%d", myIp[0], myIp[1], myIp[2], myIp[3]);
 	    // END TEMP
 
-	    mslib.TriggerAll();
+    mslib.TriggerAll();
 		Udp.flush();
 		StaticJsonBuffer<900> jsonBuffer;
 		JsonObject& root = jsonBuffer.createObject();
-		root["sensor"] = myIpString;
+		root["Photon"] = myIpString;
 
-    	delay(50);
+    delay(10);
 		mslib.Update(&root);
 		char buffer[205];
 		root.printTo(buffer, sizeof(buffer));
