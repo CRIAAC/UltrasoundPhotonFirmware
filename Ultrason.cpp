@@ -12,6 +12,8 @@
 
 #include "application.h"
 
+#define DELAY_ULTRASOUND_DATA 50
+
 SYSTEM_MODE(SEMI_AUTOMATIC);
 STARTUP(WiFi.selectAntenna(ANT_AUTO));
 
@@ -67,7 +69,7 @@ void loop()
         JsonObject& root = jsonBuffer.createObject();
         root["Photon"] = myIpString;
 
-        delay(10);
+        delay(DELAY_ULTRASOUND_DATA);
         mslib.Update(&root);
         char buffer[205];
         root.printTo(buffer, sizeof(buffer));
