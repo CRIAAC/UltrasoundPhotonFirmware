@@ -80,5 +80,6 @@ void loop()
         Udp.beginPacket(ipAddress, port);
         Udp.write(buffer);
         Udp.endPacket();
+        Udp.flush();
     }
 }
