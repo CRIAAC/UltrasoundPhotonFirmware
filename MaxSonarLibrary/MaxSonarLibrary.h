@@ -16,7 +16,7 @@ class MaxSonarLibrary
         MuxLibrary* mux;
 
         vector<vector<long>> lastFilteredValues;
-        const int filterBaseValues = 5;
+        const int filterBaseValues = 10;
 
         long FilterData(int sensor, long distance, bool modeFilter);
 
@@ -30,7 +30,6 @@ public:
         void Update();
         void Update(JsonObject* json);
         int Size();
-
 };
 
 #endif

@@ -11,6 +11,7 @@
 #include "MuxLibrary.h"
 
 #include "application.h"
+#define DELAY_ULTRASOUND_DATA 50
 
 #define DELAY_ULTRASOUND_DATA 50
 
@@ -30,6 +31,7 @@ void setup()
     WiFi.clearCredentials();
     // Max 5 credentials
     WiFi.setCredentials("CRIAAC", "liara_lab", WPA2, WLAN_CIPHER_AES_TKIP);
+    //WiFi.setCredentials("HeightballVoyage", "Bonjours123", WPA2, WLAN_CIPHER_AES_TKIP);
     //WiFi.setCredentials("LIARA", "liara_lab", WPA2, WLAN_CIPHER_AES_TKIP);
     WiFi.connect();
     Particle.connect();
